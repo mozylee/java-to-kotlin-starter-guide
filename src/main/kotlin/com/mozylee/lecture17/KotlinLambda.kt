@@ -44,7 +44,7 @@ fun filterFruits(fruits: List<Fruit>, filter: (Fruit) -> Boolean): List<Fruit> {
     val result = mutableListOf<Fruit>()
 
     for (fruit in fruits) {
-        if (fruit !in fruits) {
+        if (!filter(fruit)) {
             continue
         }
 
