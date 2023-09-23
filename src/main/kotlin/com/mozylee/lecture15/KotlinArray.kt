@@ -8,4 +8,6 @@ fun main() {
     for ((index, value) in array2.withIndex()) {
         println("index${index}: ${value}")
     }
+
+    array2.forEachIndexed { index, value -> println("index${index}: ${value}") }
 }

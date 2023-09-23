@@ -9,9 +9,7 @@ fun main() {
 
     // list.add() // 기본적으로 immutable 이라 add 불가
     // forEach 활용 가능
-    for ((index, number) in list.withIndex()) {
-        println("index${index}: ${number}")
-    }
+    list.forEachIndexed { index, number ->  println("index${index}: ${number}")}
 
     // 가변 리스트 (구현체는 ArrayList, Java 의 리스트와 유사)
     val numbers = mutableListOf(100, 200)
@@ -28,9 +26,7 @@ fun main() {
 
     val pairInitialMap = mutableMapOf("키" to "밸류", "key" to "value")
 
-    for ((key, value) in map){
-        println("${key} : ${value}")
-    }
+    pairInitialMap.forEach { key, value -> println("${key} : ${value}") }
 }
 
 fun getEmptyList(list: List<Int>) {
